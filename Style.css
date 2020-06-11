@@ -1,0 +1,446 @@
+body{
+    /* background-image: url("Sky.JPG");
+    background-attachment: fixed;
+    background-size: cover; */
+   background-color: black !important;
+}
+*{
+    scrollbar-width: thin;          /* "auto" or "thin"  */
+    scrollbar-color:  rgba(69, 69, 80, 0.623) rgba(128,128,128,0.6); 
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: rgba(128,128,128,0.6);        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 69, 80, 0.623);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+      /* creates padding around scroll thumb */
+  }
+
+.Description{
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    top: 50%;
+    height: 450px;
+    width: 45%;
+} 
+
+.Description h1{
+    color: white;
+}
+footer{
+    color: white;
+}
+.Menu{
+    width: 100%;
+    height: 50px;
+    top: 5px;
+    position: fixed;
+    z-index: 3;
+}
+.Menu ul{
+    color: white;
+    list-style-type: none;
+    margin-right: 50px;
+    padding: 0;
+    float: right;    
+}
+.Menu ul li{
+    display: inline;
+    margin-left: 5px;
+}
+#about{
+    position: absolute;
+    width: 35vw;
+    height: fit-content;
+    bottom: 60px;
+    left:30px;
+    opacity: 0;
+    transition: ease-in 1s;
+}
+#intro{
+    position: relative;
+    margin-top: 30px;
+    width:100%;
+    height:95vh;
+    /* background-color: white; */
+    right: 0px;
+    color: black;  
+    
+}
+
+#work, #skills, #education, #projects{
+    position: relative;
+    margin-top: 20px;
+    width:100% ;
+    height:100vh ;
+    /* background-color: white; */
+    right: 0px;
+    color: black;
+
+}
+#main{
+    background-color: white;
+}
+#techs{
+    color: white;
+    margin-top: 40vh;
+}
+#techs span{
+    font-size: 50px;
+    font-style: bold;
+}
+.workDes{ 
+    width: 300px;
+    height: 500px;   
+    margin-top: 60px;
+}
+.des{
+    position: absolute; 
+    margin-left: 70%;
+    margin-top: 180px;
+}
+.innerContainer{
+    margin-top: 180px;
+    margin-left: 30%;
+    position: absolute;   
+}
+#skillsHolder{
+    border: 2px black solid;
+    width: 35vw;
+    height: 65vh;
+}
+#skillsHolder img{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    object-fit: contain;
+    background-color: white;   
+}
+.education{
+    margin-left: 10%;  
+    width: 55%;
+    height: 65vh;
+    margin-top: 180px;
+    position: absolute;
+}
+.education div img{
+    width: 600px;
+    height: auto;
+    padding: 30px;
+}
+.education div{
+    display: inline-flex;    
+}
+.education div div{
+    margin-bottom: 0px;    
+    height: fit-content;
+    margin-top: 50px;
+}
+.projectContainer{
+    margin-top: 180px;
+    margin-left: 15%;
+    position: absolute;
+    width: fit-content;
+}
+.projectContainer div{
+    height: auto;
+    padding: 10px;
+    overflow-y: hidden;
+}
+.projectContainer div img{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    object-fit: contain;
+    background-color: white;
+    overflow-x: hidden;   
+    position: relative; 
+}
+.projectContainer div img:hover{
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;  
+    transition: ease-in 0.1s;  
+}
+#contact{
+    margin-top: 20px;
+    width: 100%;
+    height: 20vh;
+    position: relative;  
+    display: flex;  
+}
+#contact div div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;    
+}
+.contactHolder div{
+    width: 800px;   
+    margin-right: 15%;    
+    padding: 25px;
+    position: absolute;
+}
+
+#contactmsg{
+    margin-left: 150px;
+    margin-top: 50px;
+    font-size: 6vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.show{
+    display: block;
+    animation: fadein 1s;
+    -webkit-animation: fadein ease 1s;
+    -moz-animation: fadein ease 1s;
+    -o-animation: fadein ease 1s;
+    -ms-animation: fadein ease 1s;
+}
+@keyframes fadein {
+    from { opacity: 0; display: none; }
+    to   { opacity: 1; display: block; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; display: none;}
+    to   { opacity: 1; display: block;}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; display: none; }
+    to   { opacity: 1; display: block;}
+}
+.hide {    
+    animation: fadeOut ease 1s;
+    -webkit-animation: fadeOut ease 1s;
+    -moz-animation: fadeOut ease 1s;
+    -o-animation: fadeOut ease 1s;
+    -ms-animation: fadeOut ease 1s;
+    display: none;
+}
+@keyframes fadeOut {
+    0% {
+      opacity:1;
+      display: block;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+}
+  
+@-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+      display: block;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+}
+  
+@-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+      display: block;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+}
+  
+@-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+      display: block;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+}
+  
+@-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+      display: block;
+    }
+    100% {
+      opacity:0;
+      display: none;
+  } 
+}
+.checked {
+    color: black;
+}
+
+#langDes div div img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+p, li{
+    margin-left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+#aspCorePrjDes, #unityPrjDes, #djangoPrjDes {
+    position: absolute;
+    left: 60px;
+}
+.major{
+    font-size: 3vh;
+    font-weight: bold;
+    color: red;
+}
+.header h2{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 5vh;    
+}
+#workImg{
+    position: absolute; 
+    top: 180px;
+     left:30%; 
+     height: 250px; 
+     width: 250px;
+     background-color: red; 
+     z-index: 2;
+     object-fit: scale-down;
+}
+#workDetail{
+    position: absolute; 
+    bottom: 100px; 
+    left: 40%; 
+    width: 500px; 
+    height: 50%;  
+    z-index: 3;        
+}
+
+#netcore{
+    position: absolute; top: 10px; right: 40%;
+}
+#csharp{
+    position: absolute; top: 160px; left: 10px;
+}
+#css{
+    position: absolute; top: 160px; left: 170px;
+}
+#python{
+    position: absolute; top: 160px; left: 330px;
+}
+#django{
+    position: absolute; top: 160px; left: 500px;
+}#js{
+    position: absolute; top: 310px; left: 10px;
+}
+#node{
+    position: absolute; top: 310px; left: 170px;
+}
+#react{
+    position: absolute; top: 310px; left: 330px;
+}
+#html{
+    position: absolute; top: 310px; left: 500px;
+}
+#unity{
+    position: absolute; bottom: 10px; right: 40%;
+}
+
+@media only screen and (max-width: 1600px) {
+    #workImg {
+        position: absolute;
+        left: 10%;
+    }
+    #workDetail{
+        position: absolute; 
+        bottom: 5px;
+        left: 20%;
+    }
+    .innerContainer{
+        margin-top: 180px;
+        margin-left: 20%;
+        position: absolute;   
+    }
+    #skillsHolder{        
+        width: 35vw;
+        height: 65vh;
+    }
+    #skillsHolder img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: contain;
+        background-color: white;   
+    }
+    #netcore{
+        position: absolute; top: 10px; left: 170px;
+    }
+    #csharp{
+        position: absolute; top: 130px; left: 10px;
+    }
+    #css{
+        position: absolute; top: 130px; left: 120px;
+    }
+    #python{
+        position: absolute; top: 130px; left: 230px;
+    }
+    #django{
+        position: absolute; top: 130px; left: 340px;
+    }
+    #js{
+        position: absolute; top: 250px; left: 10px;
+    }
+    #node{
+        position: absolute; top: 250px; left: 120px;
+    }
+    #react{
+        position: absolute; top: 250px; left: 230px;
+    }
+    #html{
+        position: absolute; top: 250px; left: 340px;
+    }
+    #unity{
+        position: absolute; bottom: 10px; left: 170px;
+    }
+    .education div img{
+        width: 500px;
+        height: auto;
+        padding: 30px;
+    }
+    .education div{
+        display: inline-flex;    
+    }
+    .education div div{   
+        height: fit-content;
+        margin-top: 40px;
+    }
+    .projectContainer div img{
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
+        object-fit: contain;
+        background-color: white;
+        overflow-x: hidden;
+          
+    }
+    .projectContainer div img:hover{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;    
+        transition: ease-in 0.1s;
+    }
+ 
+    #aspCorePrjDes, #unityPrjDes, #djangoPrjDes {
+        position: absolute;
+        left: 0px;
+    }
+}
